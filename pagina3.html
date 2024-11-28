@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Calificaciones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="number"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="submit"], input[type="button"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 48%;
+            margin-right: 2%;
+        }
+        input[type="button"] {
+            background-color: #dc3545;
+        }
+        .navigation {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .navigation a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Formulario de Calificaciones</h1>
+    <form id="gradeForm">
+        <label for="studentName">Nombre y Apellido del Alumno:</label>
+        <input type="text" id="studentName" name="studentName" required>
+
+        <label for="grade">Calificación:</label>
+        <input type="number" id="grade" name="grade" min="0" max="100" required>
+
+        <label for="observation">Mensaje de Observación:</label>
+        <textarea id="observation" name="observation" rows="4" required></textarea>
+
+        <label for="senderName">Nombre de la Persona que Envía el Mensaje:</label>
+        <input type="text" id="senderName" name="senderName" required>
+
+        <input type="submit" value="Enviar">
+        <input type="button" value="Limpiar" onclick="clearForm()">
+    </form>
+</div>
+
+
+
+<script>
+    document.getElementById('gradeForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Aquí puedes agregar la lógica para enviar el correo.
+        alert('Formulario enviado con éxito.'); // Mensaje de confirmación.
+        this.reset(); // Limpiar el formulario después del envío.
+    });
+
+    function clearForm() {
+        document.getElementById('gradeForm').reset();
+    }
+</script>
+
+</body>
+</html>

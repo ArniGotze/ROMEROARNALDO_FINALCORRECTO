@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Página de Inicio</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Ingreso</h1>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Usuario (USER)" required>
+            <input type="password" id="password" placeholder="Contraseña (PASS)" required>
+            <button type="submit">Ingresar</button>
+        </form>
+        <p id="message"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>APIs Interactivas</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Interacción con APIs</h1>
+        
+        <div class="api-section">
+            <h2>API para Envío de Correo</h2>
+            <input type="text" id="email" placeholder="Escribe tu correo">
+            <button id="sendEmailBtn">Enviar Correo</button>
+            <p id="emailResponse"></p>
+        </div>
+
+        <div class="api-section">
+            <h2>API para Ver Imágenes</h2>
+            <button id="fetchImageBtn">Mostrar Imagen</button>
+            <img id="displayImage" src="" alt="PDF" style="display:none;">
+        </div>
+
+        <div class="api-section">
+            <h2>API de Gatos</h2>
+            <button id="fetchCatBtn">Mostrar Gato</button>
+            <img id="catImage" src="" alt="Gato" style="display:none;">
+        </div>
+
+        <div class="navigation">
+            <button onclick="location.href='pagina1.html'">Página 1</button>
+            <button onclick="location.href='pagina2.html'">Página 2</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
